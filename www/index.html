@@ -8,8 +8,15 @@
     <body>
          <div>
             <script type="text/javascript" charset="utf-8">
-                document.addEventListener("deviceready", onDeviceReady, false);
-
+                //document.addEventListener("deviceready", onDeviceReady, false);
+                document.addEventListener("offline", yourCallbackFunction, false);
+                document.addEventListener("online", yourCallbackFunction, false);
+                function online() {
+                    onDeviceReady()
+                }
+                function offline() {
+                    alert("Please check your network");
+                }
                 function onDeviceReady() {
                      window.open('https://www.google.com', '_blank', 'location=no,toolbar=no,hideurlbar=yes,zoom=no');
                     //window.open('https://www.google.com', '_blank', 'location=yes,toolbar=no,zoom=no');
