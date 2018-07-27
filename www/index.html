@@ -3,7 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
+        <title>Lyrics In Tamil</title>
+        
+        <link rel="stylesheet" href="css/alert.mob.css">
+		<script src="js/alert.mob.js"></script>
     </head>
     <body>
          <div>
@@ -15,7 +18,8 @@
                     onDeviceReady()
                 }
                 function onOffline() {
-                    alert("Please check your network");
+                    //alert("Please check your network");
+                    $.tips('<h4>No Internet Connection</h4><p style="text-align:left">It looks like your internet conncetion is off. Please turn it on and try again</p>',7000)
                 }
                 function onDeviceReady() {
                      window.open('http://www.lyricsintamil.com', '_blank', 'location=no,toolbar=no,hideurlbar=yes,zoom=no');
